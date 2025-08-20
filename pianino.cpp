@@ -1,14 +1,14 @@
-int czest[] = {14,15,16,17};
+int czest[] = {11, 12, 13, 14, 15, 16, 17, 18, 19};//do przycisków
 int nr_p_w = 2; //numer pierwszego wiersza
-int nr_ost_w = 3; //numer ostatniego wiersza
-int nr_p_k = 4; //numer pierwszej kolumny
-int nr_ost_k = 5; //numer ostatniej kolumny
+int nr_ost_w = 4; //numer ostatniego wiersza
+int nr_p_k = 5; //numer pierwszej kolumny
+int nr_ost_k = 7; //numer ostatniej kolumny
 void setup() {
   Serial.begin(9600);
-  pinMode(14, OUTPUT);
-  pinMode(15, OUTPUT);
-  pinMode(16, OUTPUT);
-  pinMode(17, OUTPUT);
+  for(int pin = 11; pin <= 19; pin++) //testowe diody
+  {
+  	pinMode(pin, OUTPUT);
+  }
   
 
   // Ustawienie wierszy jako OUTPUT i początkowo HIGH
@@ -42,7 +42,7 @@ void loop() {
       
     }
 
-    // Dezaktywaa wiersza
+    // Dezaktywacja wiersza
     digitalWrite(w, HIGH);
   }
 
